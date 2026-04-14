@@ -1,0 +1,36 @@
+main.py
+
+CLI 入口，讓你可以輸入一句話測試 intent。
+
+intent_classifier.py
+
+主邏輯，負責：
+
+先跑規則判斷
+判不到再回傳 unknown
+之後可擴充 LLM fallback
+rules.py
+
+放關鍵字與規則。
+
+schemas.py
+
+定義輸出格式，例如 intent 結果。
+
+tests/test_intents.py
+
+放測試案例。
+
+data/examples.json
+
+放一些訓練用/展示用範例句子。
+
+
+輸出格式
+{
+    "query": "查詢 CB602 成品庫存",
+    "intent": "inventory_query",
+    "confidence": 0.92,
+    "matched_by": "rule",
+    "reason": "matched keyword: 庫存"
+}
