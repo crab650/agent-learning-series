@@ -18,7 +18,7 @@ This repository documents my hands-on learning journey of building AI agent comp
 - [x] ai-agent-01-intent-understanding
 - [x] ai-agent-02-tool-routing
 - [X] ai-agent-03-session-memory
-- [ ] ai-agent-04-task-planning
+- [X] ai-agent-04-task-planning
 - [ ] ai-agent-05-tool-execution
 - [ ] ai-agent-06-response-synthesis
 - [ ] ai-agent-07-tracing-observability
