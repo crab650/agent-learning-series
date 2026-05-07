@@ -1,0 +1,7 @@
+.env
+*.xlsx
+today_suggestion.txt
+__pycache__/
+.venv/
+venv/
+.pytest_cache/
