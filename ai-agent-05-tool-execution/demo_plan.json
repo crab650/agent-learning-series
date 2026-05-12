@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "step": 1,
+      "action": "get_mes_finished_goods_inventory",
+      "input": {"material_code": "CB602"},
+      "depends_on": []
+    },
+    {
+      "step": 2,
+      "action": "get_raw_material_inventory",
+      "input": {"material_code": "CB602"},
+      "depends_on": []
+    },
+    {
+      "step": 3,
+      "action": "compare_inventory",
+      "input": {},
+      "depends_on": [1, 2]
+    }
+  ]
+}
