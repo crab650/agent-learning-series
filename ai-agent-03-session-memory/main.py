@@ -1,8 +1,10 @@
-from agent import handle_user_message
-from session_store import load_session, save_session
-
-
 def main() -> None:
+    try:
+        from agent_learning_series.memory import handle_user_message, load_session, save_session
+    except ModuleNotFoundError:
+        print("找不到 agent_learning_series 套件，請先在 repo 根目錄執行：pip install -e .")
+        return
+
     session_id = input("請輸入 session_id（直接 Enter 預設 user001）: ").strip()
     if not session_id:
         session_id = "user001"

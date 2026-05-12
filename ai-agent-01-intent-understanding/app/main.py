@@ -1,7 +1,11 @@
-from app.intent_classifier import IntentClassifier
-
 
 def main():
+    try:
+        from agent_learning_series.intent import IntentClassifier
+    except ModuleNotFoundError:
+        print("找不到 agent_learning_series 套件，請先在 repo 根目錄執行：pip install -e .")
+        return
+
     classifier = IntentClassifier()
 
     print("Intent Understanding Demo")
