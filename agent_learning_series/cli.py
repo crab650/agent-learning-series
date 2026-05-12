@@ -1,11 +1,19 @@
 from dataclasses import asdict
+import sys
 
 from agent_learning_series.intent import IntentClassifier
 from agent_learning_series.memory import handle_user_message, load_session, save_session
 from agent_learning_series.routing import route_tools
 
 
+def _configure_console_encoding() -> None:
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
+
+
 def main() -> None:
+    _configure_console_encoding()
     session_id = input("請輸入 session_id（直接 Enter 預設 user001）: ").strip() or "user001"
     session = load_session(session_id)
     classifier = IntentClassifier()
