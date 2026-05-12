@@ -37,7 +37,7 @@ Build a practical understanding of how AI agents work step by step:
 - [x] `ai-agent-02-tool-routing`
 - [x] `ai-agent-03-session-memory`
 - [x] `ai-agent-04-task-planning`
-- [ ] `ai-agent-05-tool-execution`
+- [x] `ai-agent-05-tool-execution`
 - [ ] `ai-agent-06-response-synthesis`
 - [ ] `ai-agent-07-tracing-observability`
 - [ ] `ai-agent-08-mini-agent-demo`
