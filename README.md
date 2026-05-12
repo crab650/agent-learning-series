@@ -27,3 +27,34 @@ This repository documents my hands-on learning journey of building AI agent comp
 ## Goal
 
 Build a practical understanding of how AI agents work step by step, including intent understanding, tool routing, memory, planning, execution, and response synthesis.
+
+## Package Refactor (v2)
+
+A new package `agent_learning_series/` is added to provide a maintainable structure while preserving per-module runnable scripts.
+
+### Run integrated entrypoint
+
+```bash
+python main.py
+```
+
+### Run module demos independently
+
+```bash
+python ai-agent-01-intent-understanding/app/main.py
+python ai-agent-02-tool-routing/app/main.py "查詢 CB602 成品庫存"
+python ai-agent-03-session-memory/main.py
+```
+
+
+### Install package (recommended)
+
+```bash
+pip install -e .
+```
+
+Then you can run:
+
+```bash
+python -m agent_learning_series
+```
