@@ -8,6 +8,7 @@ Task Planning + Tool Execution Demo
 
 import os
 import json
+import sys
 from dotenv import load_dotenv
 from openai import OpenAI
 
@@ -59,6 +60,12 @@ TOOLS = {
     "get_raw_material_inventory": get_raw_material_inventory,
     "compare_inventory": compare_inventory,
 }
+
+
+def _configure_console_encoding() -> None:
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
 
 
 # =========================
@@ -221,6 +228,7 @@ def synthesize_response(user_input: str, plan: dict, results: dict):
 # =========================
 
 def main():
+    _configure_console_encoding()
     print("Task Planning Agent 啟動")
     print("輸入 exit 離開")
 

@@ -1,5 +1,14 @@
+import sys
+
+
+def _configure_console_encoding() -> None:
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
+
 
 def main():
+    _configure_console_encoding()
     try:
         from agent_learning_series.intent import IntentClassifier
     except ModuleNotFoundError:
